@@ -20,7 +20,7 @@ router.get('/api/show-results/:user', async (req: Request, res: Response) => {
   const {user} = req.params;
   const result = await Puzzle.find({
     user,
-  }, {limit: 10, sort: -1})
+  }, null, {limit: 10, sort: -1})
 
   res.status(200).send(result);
 })
