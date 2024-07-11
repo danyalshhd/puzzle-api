@@ -10,7 +10,7 @@ import { errorHandler, NotFoundError } from '@dstransaction/common';
 import { puzzleRouter } from './routes/puzzle';
 
 const corsOptions = {
-    origin: 'http://localhost:3000',//(https://your-client-app.com)
+    origin: '*',//(https://your-client-app.com)
     optionsSuccessStatus: 200,
   };
 const app = express();
