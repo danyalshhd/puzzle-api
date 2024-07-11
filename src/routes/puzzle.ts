@@ -18,9 +18,10 @@ router.get('/api/generate-puzzle', async (req, res) => {
 router.get('/api/show-results/:user', async (req: Request, res: Response) => {
 
   const {user} = req.params;
+  console.log(user);
   const result = await Puzzle.find({
     user,
-  }, {}, {limit: 10, sort: -1})
+  }).sort(-1).limit(10)
 
   res.status(200).send(result);
 })
