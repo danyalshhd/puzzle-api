@@ -1,6 +1,6 @@
 import request from "supertest";
 import { app } from '../../app';
-import { Quote } from "../../models/quotes";
+import { Quote } from "../../models/puzzle";
 
 it('returns an error if invalid request is provided', async () => {
     await request(app)
